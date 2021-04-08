@@ -31,7 +31,7 @@ const RowFarm: React.FC = () => {
                 40x                
                 </div>
                 <div className="farmrowcol details" onClick={() => setToggled(!toggled)}>
-                Details                
+                Details <i class="fas fa-angle-down"></i>               
                 </div>
             </div>
             <div className="farmrowdetail" style={{display:toggled==true?"none":"flex"}}>

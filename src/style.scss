@@ -95,7 +95,12 @@ $white:#FFFFFF;
     }
 }
 
-.btngreen{color: #fff;}
+.btngreen{
+    color: #fff;
+    &:hover{
+        color: #fff;
+    }
+}
 .reactswitch{
     transform: scale(0.9);
     margin-right: 10px;
@@ -416,6 +421,12 @@ $white:#FFFFFF;
    background-size:100% 100%;
    background-color:transparent;
    text-align: center;
+   cursor: pointer;
+   transition: all 0.2s linear;
+   &:hover{
+       
+       transform: scale(1.1);
+   }
  }
 .btnbrown{
     background:url("images/hyrule/btnnavbg.png");
@@ -450,7 +461,8 @@ $white:#FFFFFF;
  }
  a {
    color: inherit;
-   text-decoration: none;
+   text-decoration: none !important;
+   color: initial;
  }
  [role="button"] {
    cursor: pointer;
