@@ -33,7 +33,7 @@ const Leftlayout: React.FC = () => {
                     </div>
                 </div>
                 <div className="menulinkouter">
-                    <Link to="/farms"><img src="images/icons/ic3.png" />Lon Lon Ranch</Link>
+                    <Link to="/farm"><img src="images/icons/ic3.png" />Lon Lon Ranch</Link>
                 </div>
                 <div className="menulinkouter">
                     <Link href="#"><img src="images/icons/ic4.png" />Reservoirs</Link>
