@@ -15,8 +15,6 @@ class Middlelayout extends React.Component {
   render() {
     return(
         <div className="middle_layout home"> 
-            
-            <Router>
               <div>
                 <Switch>
                   <Route path="/farm">
@@ -34,7 +32,7 @@ class Middlelayout extends React.Component {
                   </Route>
                 </Switch>
               </div>
-            </Router>
+            
         </div>
     );
   }

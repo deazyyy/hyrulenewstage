@@ -14,7 +14,7 @@ const Leftlayout: React.FC = () => {
 
     const [mobile, setMobile] = useState(true);
     return(
-        <Router>
+        <>
         <div className="mobilenav">
             <i className={(mobile==true )?"fas fa-bars":"fas fa-times"}  onClick={() => setMobile(!mobile)} ></i>
             <img src={'./images/hyrule/logo.png'} className="navlogo"/>
@@ -74,7 +74,7 @@ const Leftlayout: React.FC = () => {
                 </div>
             </div>
         </div>
-        </Router>
+        </>
     );
 }
 
