@@ -21,11 +21,19 @@ $white:#FFFFFF;
 
 .middle_layout{
     width:65%;
-    margin: 50px auto
+    margin: 50px auto;
+}
+.middle_layout_outer{
+ margin-left: 250px;
+ width: 100%;
 }
 
 
 .left_layout{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
     width: 250px;
     background-color: $white;
     display: flex;
@@ -41,6 +49,11 @@ $white:#FFFFFF;
         flex-direction: column;
         justify-content: space-between;
         overflow:scroll;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        &::-webkit-scrollbar {
+          display: none;
+        }
     }
 }
 
@@ -146,6 +159,9 @@ $white:#FFFFFF;
 
 
 @media (max-width: 1024px) {
+  .middle_layout_outer{
+    margin-left: 0px;
+   }
     .mobilenav{
         display: flex;
     }

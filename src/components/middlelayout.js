@@ -14,8 +14,8 @@ import {
 class Middlelayout extends React.Component {
   render() {
     return(
-        <div className="middle_layout home"> 
-              <div>
+        <div className="middle_layout_outer"> 
+              <div className="middle_layout home">
                 <Switch>
                   <Route path="/farm">
                     <Farm />
