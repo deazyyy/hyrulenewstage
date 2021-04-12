@@ -86,7 +86,7 @@ $white:#FFFFFF;
     color: rgb(221, 198, 171);
 }
 
-.btn-main:disabled, .btn-main[disabled]{
+.btn-main.disabled{
     background:url("images/hyrule/btn_disabled.png");
     background-size:100% 100%;
     background-color: transparent !important;
@@ -94,10 +94,6 @@ $white:#FFFFFF;
     color: #9a9388 !important; 
    }
 
-
-.home{
-    
-}
 
 .homemainheading{
     position: relative;
@@ -238,11 +234,13 @@ $white:#FFFFFF;
         }
     }
 }
+.framelgbg{
+  background:url("images/hyrule/frame1920.png") ;
+  background-size:100% 100%;
+}
+
 .farmrowblockouter{
-    background:url("images/hyrule/farmbg.png") ;
-    background-size:100% 100%;
     width: 100%;
-    
     border-radius: 16px;
     margin: 16px 0px;
     
@@ -250,6 +248,11 @@ $white:#FFFFFF;
     .farmrowblockinner{
         max-height: 668px;
         overflow: scroll;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        &::-webkit-scrollbar {
+          display: none;
+        }
     }
     .farmrowmain{
         border-bottom: 3px solid #352f25;
@@ -1129,15 +1132,24 @@ $white:#FFFFFF;
  margin: 5px auto;
 }
 .kokiriouter{
- background:url("images/hyrule/kokiribg.png");
- background-size:100% 100%;
- display:flex;
  padding:60px 36px;
- flex-flow:wrap;
  margin-top: 30px;
- justify-content: space-between;
+ .kokirinner{
+  max-height: 668px;
+  overflow: scroll;
+  padding: 0;
+  width: 100%;
+  display:flex;
+  flex-flow:wrap;
+  justify-content: space-between;
+  -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        &::-webkit-scrollbar {
+          display: none;
+        }
+}
  .kokbox{
-   width:20%;
+   width:20%  ;
    text-align:center;
    font-size:18px;
    color: #877862;
@@ -1291,6 +1303,10 @@ $white:#FFFFFF;
 
 
 @media (max-width: 1600px) {
+  .framelgbg{
+    background:url("images/hyrule/frame1600.png") ;
+    background-size:100% 100%;
+  }
     .farmcardouter .farmcardmain{padding: 6px 45px 80px;}
     .btn-main{padding: 14px;}
 }
@@ -1306,6 +1322,14 @@ $white:#FFFFFF;
         width: 100%;
         max-width: 400px;
     }
+}
+
+
+@media (max-width: 1400px) {
+  .framelgbg{
+    background:url("images/hyrule/frame1400.png") ;
+    background-size:100% 100%;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -1324,10 +1348,15 @@ $white:#FFFFFF;
 }
 
 @media (max-width: 1200px) {
+ 
     .roulettehero{flex-direction: column;align-items: center;}
     .rouletteherow2{margin-top: 30px;}
 }
 @media (max-width: 992px) {
+  .farmrowblockouter{
+    background:url("images/hyrule/boardlong768.png") ;
+      background-size:100% 100%;
+  }
    .farmrowblockouter{
        .farmrow{flex-direction: column;}
        .farmrowcolicon{margin-bottom: 14px;}
@@ -1361,7 +1390,12 @@ $white:#FFFFFF;
 
 
 @media (max-width: 768px) {
+  .framelgbg{
+    background:url("images/hyrule/frame768.png") ;
+    background-size:100% 100%;
+  }
     .farmcardouter .farmcardmain{width: calc(100% - 200px);margin: 10px auto;padding: 6px 60px 80px;max-width: 500px;}
+    
     .middle_layout{
         padding-top: 60px;
         width:80%;
@@ -1378,7 +1412,18 @@ $white:#FFFFFF;
     .kokiriouter .kokbox{width: auto;}
 }
 
+@media (max-width: 600px){
+  .framelgbg{
+    background:url("images/hyrule/frame600.png") ;
+    background-size:100% 100%;
+  }
+}
+
 @media (max-width: 500px) {
+  .framelgbg{
+    background:url("images/hyrule/frame500.png") ;
+    background-size:100% 100%;
+  }
     .farmcardouter .farmcardmain{width: calc(100%);margin: 10px auto;padding: 6px 60px 80px;max-width: 500px;}
     .middle_layout{
         padding-top: 60px;
@@ -1397,6 +1442,12 @@ $white:#FFFFFF;
     .roulettehomeouter .bgbxl .triangle{ margin: 20px auto;height: auto;}
 }
 
+@media (max-width: 400px) {
+  .framelgbg{
+    background:url("images/hyrule/frame400.png") ;
+    background-size:100% 100%;
+  }
+}
 @media (max-width: 375px) {
     .farmcardouter .farmcardmain{margin: 10px auto;padding: 6px 40px 80px;max-width: 500px;}
     .middle_layout{

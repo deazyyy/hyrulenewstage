@@ -26,7 +26,7 @@ const Leftlayout: React.FC = () => {
                     <Link to="/"><img src="images/icons/ic1.png" />Home</Link>
                 </div>
                 <div className="menulinkouter">
-                    <Link  data-toggle="collapse" data-target="#excnav"><img src="images/icons/ic2.png" />Trade <i class="fas fa-angle-down"></i></Link>
+                    <Link to="/" data-toggle="collapse" data-target="#excnav"><img src="images/icons/ic2.png" />Trade <i className="fas fa-angle-down"></i></Link>
                     <div className="menulinkinner collapse" id="excnav">
                         <a href="#">Exchange</a>
                         <a href="#">Liquidity</a>
@@ -36,7 +36,7 @@ const Leftlayout: React.FC = () => {
                     <Link to="/farm"><img src="images/icons/ic3.png" />Lon Lon Ranch</Link>
                 </div>
                 <div className="menulinkouter">
-                    <Link href="#"><img src="images/icons/ic4.png" />Reservoirs</Link>
+                    <Link to="/"><img src="images/icons/ic4.png" />Reservoirs</Link>
                 </div>
                 <div className="menulinkouter">
                     <Link to="/kokiri"><img src="images/icons/ic5.png" />Kokiri Shop</Link>
@@ -45,16 +45,16 @@ const Leftlayout: React.FC = () => {
                     <Link to="/gambling"><img src="images/icons/ic6.png" />Gambling</Link>
                 </div>
                 <div className="menulinkouter">
-                    <Link href="#"><img src="images/icons/ic7.png" />Vaults</Link>
+                    <Link to="/"><img src="images/icons/ic7.png" />Vaults</Link>
                 </div>
                 <div className="menulinkouter">
-                    <Link href="#"><img src="images/icons/ic8.png" />Audit</Link>
+                    <Link to="/"><img src="images/icons/ic8.png" />Audit</Link>
                 </div>
                 <div className="menulinkouter">
-                    <Link href="#"><img src="images/icons/ic8.png" />Roadmap</Link>
+                    <Link to="/"><img src="images/icons/ic8.png" />Roadmap</Link>
                 </div>
                 <div className="menulinkouter">
-                    <Link href="#"><img src="images/icons/ic10.png" />Info</Link>
+                    <Link to="/"><img src="images/icons/ic10.png" />Info</Link>
                 </div>
             </div>
             <div className="footer">

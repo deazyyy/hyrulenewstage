@@ -31,7 +31,7 @@ const RowFarm: React.FC = () => {
                 40x                
                 </div>
                 <div className="farmrowcol details" onClick={() => setToggled(!toggled)}>
-                Details <i class="fas fa-angle-down"></i>               
+                Details <i className="fas fa-angle-down"></i>               
                 </div>
             </div>
             <div className="farmrowdetail" style={{display:toggled==true?"none":"flex"}}>
@@ -49,7 +49,7 @@ const RowFarm: React.FC = () => {
                     <div><small>~0.000USD</small></div>             
                 </div>
                 <div className="farmrowcol">
-                    <a className="btn-main" disabled> Harvest</a>             
+                    <a className="btn-main disabled" > Harvest</a>             
                 </div>
                 <div className="farmrowcol">
                     <a className="btn-main btngreen">Unlock Wallet</a>     

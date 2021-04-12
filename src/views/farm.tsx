@@ -23,8 +23,8 @@ const [grid, setGrid] = useState(false);
             <div className="farmcontrol">
               <div className="farmright">
                 <div className="farmview">
-                  <i class="fas fa-th-large"  onClick={() => setGrid(true)} style={{color:grid==true?"#ddc5ab":"#4f473d"}}></i>
-                  <i class="fas fa-th-list"  onClick={() => setGrid(false)} style={{color:grid==false?"#ddc5ab":"#4f473d"}}></i>  
+                  <i className="fas fa-th-large"  onClick={() => setGrid(true)} style={{color:grid==true?"#ddc5ab":"#4f473d"}}></i>
+                  <i className="fas fa-th-list"  onClick={() => setGrid(false)} style={{color:grid==false?"#ddc5ab":"#4f473d"}}></i>  
                 </div>
                 <div className="farmswitch">
                  
@@ -61,7 +61,7 @@ const [grid, setGrid] = useState(false);
 
            
             <div style={{position:"relative"}}>
-              <div className="farmrowblockouter" style={{display:grid==true?"none":"block"}}>
+              <div className="farmrowblockouter framelgbg" style={{display:grid==true?"none":"block"}}>
                 <div className="farmrowblockinner">
                   <RowFarm/>
                   <RowFarm/>

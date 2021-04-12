@@ -34,8 +34,8 @@ const RowCardFarm: React.FC = () => {
                     </div>
                 </div>
                 <div className="btnouter">
-                    <a className="btn-main" disabled> Compound</a> 
-                    <a className="btn-main" disabled> Harvest</a>            
+                    <a className="btn-main disabled"> Compound</a> 
+                    <a className="btn-main disabled"> Harvest</a>            
                 </div>
                 <a className="btn-main btngreen">Unlock Wallet</a>    
                 <div className="details" onClick={() => setToggled(!toggled)}>
