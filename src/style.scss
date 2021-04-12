@@ -157,9 +157,8 @@ $white:#FFFFFF;
 		width: 80%;
 		margin: 50px auto
 	}
-	// .left_layout{display: none;}
-
 }
+
 // farms
 .farmcontrol {
 	margin-top: 20px;
@@ -1308,6 +1307,7 @@ td {
 		width: 100%;
 		max-width: 400px;
 	}
+  .middle_layout{width: 80%;}
 }
 @media (max-width: 1400px) {
 	.framelgbg {
@@ -1487,4 +1487,17 @@ td {
 	.roulettehomeouter .bgbxl {
 		padding: 15px 25px 34px;
 	}
+}
+
+
+
+
+
+
+@media (min-width: 1024px) and (max-width: 1300px){
+  .farmrowblockouter{
+    .farmrow{flex-direction: column;text-align: center;}
+	.farmrowcol{margin: 5px 0;}
+	.farmrowdetail{flex-direction: column;text-align: center;}
+  }
 }
