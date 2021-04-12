@@ -22,38 +22,38 @@ const Leftlayout: React.FC = () => {
         <div className="left_layout styledpanelcss" style={{display:mobile==true && width < 1024?"none":"flex"}}> 
             <div className="header">
                 <img src={'./images/hyrule/logo.png'} className="navlogo"/>
-                <div className="menulinkouter">
+                <div className="menulinkouter" onClick={() => setMobile(!mobile)}>
                     <Link to="/"><img src="images/icons/ic1.png" />Home</Link>
                 </div>
                 <div className="menulinkouter">
                     <Link to="/" data-toggle="collapse" data-target="#excnav"><img src="images/icons/ic2.png" />Trade <i className="fas fa-angle-down"></i></Link>
                     <div className="menulinkinner collapse" id="excnav">
-                        <a href="#">Exchange</a>
-                        <a href="#">Liquidity</a>
+                        <a href="#" onClick={() => setMobile(!mobile)}>Exchange</a>
+                        <a href="#" onClick={() => setMobile(!mobile)}>Liquidity</a>
                     </div>
                 </div>
-                <div className="menulinkouter">
+                <div className="menulinkouter" onClick={() => setMobile(!mobile)}>
                     <Link to="/farm"><img src="images/icons/ic3.png" />Lon Lon Ranch</Link>
                 </div>
-                <div className="menulinkouter">
+                <div className="menulinkouter" onClick={() => setMobile(!mobile)}>
                     <Link to="/"><img src="images/icons/ic4.png" />Reservoirs</Link>
                 </div>
-                <div className="menulinkouter">
+                <div className="menulinkouter" onClick={() => setMobile(!mobile)}>
                     <Link to="/kokiri"><img src="images/icons/ic5.png" />Kokiri Shop</Link>
                 </div>
-                <div className="menulinkouter">
+                <div className="menulinkouter" onClick={() => setMobile(!mobile)}>
                     <Link to="/gambling"><img src="images/icons/ic6.png" />Gambling</Link>
                 </div>
-                <div className="menulinkouter">
+                <div className="menulinkouter" onClick={() => setMobile(!mobile)}>
                     <Link to="/"><img src="images/icons/ic7.png" />Vaults</Link>
                 </div>
-                <div className="menulinkouter">
+                <div className="menulinkouter" onClick={() => setMobile(!mobile)}>
                     <Link to="/"><img src="images/icons/ic8.png" />Audit</Link>
                 </div>
-                <div className="menulinkouter">
+                <div className="menulinkouter" onClick={() => setMobile(!mobile)}>
                     <Link to="/"><img src="images/icons/ic8.png" />Roadmap</Link>
                 </div>
-                <div className="menulinkouter">
+                <div className="menulinkouter" onClick={() => setMobile(!mobile)}>
                     <Link to="/"><img src="images/icons/ic10.png" />Info</Link>
                 </div>
             </div>
