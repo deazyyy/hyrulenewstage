@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import  Landing from './../views/landing';
-import  Farm from './../views/farm';
+import  Landing from './../views/Home/landing';
+import  Farm from './../views/Farm/farm';
 import  Gambling from './../views/Gambling/gambling';
 import  Kokiri from './../views/Kokiri/kokiri';
 
