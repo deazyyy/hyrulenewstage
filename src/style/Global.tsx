@@ -33,6 +33,7 @@ $white:#FFFFFF;
 .middle_layout_outer {
 	margin-left: 250px;
 	width: 100%;
+	min-height: 100vh;
 }
 
 .left_layout {
