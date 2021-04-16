@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import  Leftlayout from './components/leftlayout';
 import  Middlelayout from './components/middlelayout';
 import  Rightlayout from './components/rightlayout';
-import './style.scss';
 import {
   BrowserRouter as Router,
   Switch,

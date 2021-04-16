@@ -1,78 +1,28 @@
-import React, { Component, useState, useRef } from 'react';
-import ReactDOM from 'react-dom';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    Redirect
-} from "react-router-dom";
+import React, { useState,useEffect} from 'react';
+import Footer from './Menu/Footer/' 
+import Panel from './Menu/Panel/' 
 
 
 const Leftlayout: React.FC = () => {
-    const width = window.innerWidth;
+    const [width, setWidth] = useState(window.innerWidth);
+    const [showMenu, setShowMenu] = useState(true);
+    useEffect(() => {
+        function handleResize() {
+            setWidth(window.innerWidth)
+        }
+        window.addEventListener('resize', handleResize)
+    })
 
-    const [mobile, setMobile] = useState(true);
     return (
         <>
             <div className="mobilenav">
-                <i className={(mobile == true) ? "fas fa-bars" : "fas fa-times"} onClick={() => setMobile(!mobile)} ></i>
+                <i className={(showMenu == true) ? "fas fa-bars" : "fas fa-times"} onClick={() => setShowMenu(!showMenu)} ></i>
                 <img src={'./images/hyrule/logo.png'} className="navlogo" />
             </div>
-            <div className="left_layout styledpanelcss" style={{ display: mobile == true && width < 1024 ? "none" : "flex" }}>
-                <div className="header">
-                    <img src={'./images/hyrule/logo.png'} className="navlogo" />
-                    <div className="menulinkouter" onClick={() => setMobile(!mobile)}>
-                        <Link to="/"><img src="images/icons/ic1.png" />Home</Link>
-                    </div>
-                    <div className="menulinkouter">
-                        <Link to="/" data-toggle="collapse" data-target="#excnav"><img src="images/icons/ic2.png" />Trade <i className="fas fa-angle-down"></i></Link>
-                        <div className="menulinkinner collapse" id="excnav">
-                            <a href="#" onClick={() => setMobile(!mobile)}>Exchange</a>
-                            <a href="#" onClick={() => setMobile(!mobile)}>Liquidity</a>
-                        </div>
-                    </div>
-                    <div className="menulinkouter" onClick={() => setMobile(!mobile)}>
-                        <Link to="/farm"><img src="images/icons/ic3.png" />Lon Lon Ranch</Link>
-                    </div>
-                    <div className="menulinkouter" onClick={() => setMobile(!mobile)}>
-                        <Link to="/"><img src="images/icons/ic4.png" />Reservoirs</Link>
-                    </div>
-                    <div className="menulinkouter" onClick={() => setMobile(!mobile)}>
-                        <Link to="/kokiri"><img src="images/icons/ic5.png" />Kokiri Shop</Link>
-                    </div>
-                    <div className="menulinkouter" onClick={() => setMobile(!mobile)}>
-                        <Link to="/gambling"><img src="images/icons/ic6.png" />Gambling</Link>
-                    </div>
-                    <div className="menulinkouter" onClick={() => setMobile(!mobile)}>
-                        <Link to="/"><img src="images/icons/ic7.png" />Vaults</Link>
-                    </div>
-                    <div className="menulinkouter" onClick={() => setMobile(!mobile)}>
-                        <Link to="/"><img src="images/icons/ic8.png" />Audit</Link>
-                    </div>
-                    <div className="menulinkouter" onClick={() => setMobile(!mobile)}>
-                        <Link to="/"><img src="images/icons/ic8.png" />Roadmap</Link>
-                    </div>
-                    <div className="menulinkouter" onClick={() => setMobile(!mobile)}>
-                        <Link to="/"><img src="images/icons/ic10.png" />Info</Link>
-                    </div>
-                </div>
-                <div className="footer">
-                    <div className="panelFooter">
-                        <button className="btn-main">connect</button>
-                        <div className="panelinfoouter">
-                            <div className="panelprice">
-                                <img src={'./images/hyrule/gem.png'} />
-                            $0.45
-                        </div>
-                            <div className="panelsocial">
-                                <img src={'./images/icons/twitter.png'} />
-                                <img src={'./images/icons/telegram.png'} />
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+            <div className="left_layout styledpanelcss" style={{ display: width <= 1024 ? (showMenu == true ?"none" : "flex" ):"flex"}}>
+                
+                <Panel setShowMenu={setShowMenu}/>
+                <Footer />
             </div>
         </>
     );
