@@ -110,7 +110,7 @@ $white:#FFFFFF;
 }
 
 .btngreen {
-	color: #fff;
+	color: #fff !important;
 
 	&:hover {
 		color: #fff;
@@ -755,6 +755,15 @@ td {
 		width: calc(100% - 0px) !important;
 		display: block;
 		margin: auto
+	}
+	.farmrowblockouter {
+		.farmrowdetail .farmrowcol{
+			flex-direction:column
+		}
+		.farmrowdetail .btngreen{
+			width:100%;
+			min-width:unset
+		}
 	}
 }
 
@@ -1529,7 +1538,7 @@ td {
 	}
 
 	.btn-main {
-		padding: 14px;
+		padding: 14px 30px;
 	}
 
 	.kokiriouter .kokbox button {
