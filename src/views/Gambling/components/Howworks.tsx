@@ -3,7 +3,7 @@ import KingHeader from 'components/Header/KingHeader'
 
 const Howworks: React.FC = () => {
     return (
-        <div className="bgbxl homecards">
+        <div className="bgbxl homecards frameroulette">
             <KingHeader heading={"How it works"} />
             <div className="infoouter">
                 Spend RUPEE to bet, contributing to the wheel pot. Win prizes if the color of your bet matches with the
