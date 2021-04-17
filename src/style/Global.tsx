@@ -1201,6 +1201,7 @@ td {
 			url("images/hyrule/boardbgmbtop.png"), 
 			url("images/hyrule/boardbgmbbtm.png");
 			background-size: 100%,100%;
+			padding:45px;
 			&:before{
 				background: url("images/hyrule/boardbgmbmid.png");
 				background-size: 100%;
