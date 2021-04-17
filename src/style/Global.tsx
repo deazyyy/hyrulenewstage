@@ -1337,6 +1337,7 @@ td {
 		.bgbxl:first-child {
 			margin-bottom: 40px !important;
 		}
+		.rowouter{text-align:left}
 	}
 }
 
