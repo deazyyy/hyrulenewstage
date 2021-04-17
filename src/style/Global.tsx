@@ -1205,7 +1205,9 @@ td {
 		}
 
 		.infoouter {
-			margin-top: 30px
+			margin-top: 30px;
+			display:flex;
+			.rowouter{width:50%}
 		}
 	}
 
@@ -1236,10 +1238,14 @@ td {
 	.rowouter {
 		display: flex;
 		align-items: center;
+		flex-direction:column;
+		justify-content:center;
 		margin: 8px 0;
+		text-align:center;
 
 		.rowinner {
-			width: 50%
+			// width: 50%
+			margin:6px 0
 		}
 	}
 
@@ -1694,6 +1700,22 @@ td {
 }
 
 @media (max-width: 500px) {
+	.homecardouter .bgbxsm{
+		background: url("images/hyrule/framesmbg.png");
+		background-size: 100% 100%;
+		min-height: 254px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.homecardouter .bgbxl{
+		background: url("images/hyrule/framebxlbg.png");
+		background-size: 100% 100%;
+		min-height: 254px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 	.framelgbg {
 		background: url("images/hyrule/frame500.png");
 		background-size: 100% 100%;
@@ -1740,6 +1762,14 @@ td {
 	.framelgbg {
 		background: url("images/hyrule/frame402.png");
 		background-size: 100% 100%;
+	}
+	.homecardouter .bgbxl{
+		background: url("images/hyrule/framebxl400bg.png");
+		background-size: 100% 100%;
+		min-height: 254px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 }
 
