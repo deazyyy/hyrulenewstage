@@ -1221,13 +1221,18 @@ td {
 		}
 
 		.infoouter {
-			margin-top: 0px
+			margin-top: 0px;
+			flex-direction:column;
+			
 		}
 
 		.rowouter {
 			display: flex;
 			margin: 8px 0;
 			justify-content: space-between;
+			flex-direction:row;
+			align-items: flex-start;
+			width:100% !important;
 
 			.rowinner {
 				width: auto
