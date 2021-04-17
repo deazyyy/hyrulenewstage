@@ -1196,6 +1196,19 @@ td {
 			background-repeat:repeat;
 			z-index:-1
 		}
+		@media (max-width: 550px) {
+			background-image: 
+			url("images/hyrule/boardbgmbtop.png"), 
+			url("images/hyrule/boardbgmbbtm.png");
+			background-size: 100%,100%;
+			&:before{
+				background: url("images/hyrule/boardbgmbmid.png");
+				background-size: 100%;
+				background-repeat:repeat;
+				z-index:-1;
+				height: 60%;
+			}
+		}
 
 		.headingouterot {
 			position: absolute;
@@ -1254,6 +1267,19 @@ td {
 			background-size: 100%;
 			background-repeat:repeat;
 			z-index:-1
+		}
+		@media (max-width: 550px) {
+			background-image: 
+			url("images/hyrule/boardbgmbtop.png"), 
+			url("images/hyrule/boardbgmbbtm.png");
+			background-size: 100%,100%;
+			&:before{
+				background: url("images/hyrule/boardbgmbmid.png");
+				background-size: 100%;
+				background-repeat:repeat;
+				z-index:-1;
+				height: 60%;
+			}
 		}
 
 		h2 {
@@ -1495,6 +1521,10 @@ td {
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
+					@media (max-width: 550px) {
+						h4{margin-bottom:10px}
+						flex-direction:column;
+					}
 				}
 			}
 		}
@@ -1538,6 +1568,30 @@ td {
 				background-repeat:repeat;
 			}
 		
+		}
+		@media (max-width: 992px) {
+			background-image: 
+			url("images/hyrule/hobg768top.png"), 
+			url("images/hyrule/hobg768btm.png");
+			background-size: 100%,100%;
+			&:before{
+				background: url("images/hyrule/hobg768mid.png");
+				background-size: 100%;
+				background-repeat:repeat;
+				z-index:-1
+			}
+		}
+		@media (max-width: 550px) {
+			background-image: 
+			url("images/hyrule/hobg402top.png"), 
+			url("images/hyrule/hobg402btm.png");
+			background-size: 100%,100%;
+			&:before{
+				background: url("images/hyrule/hobg402mid.png");
+				background-size: 100%;
+				background-repeat:repeat;
+				z-index:-1
+			}
 		}
 	}
 
