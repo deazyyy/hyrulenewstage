@@ -1430,6 +1430,7 @@ td {
 		font-size: 18px;
 		color: #877862;
 		margin: 20px 0;
+		padding: 0 10px;
 
 		.kokboximg {
 			width: 85px;
