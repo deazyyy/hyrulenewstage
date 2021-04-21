@@ -1715,6 +1715,70 @@ td {
 }
 
 
+// modal
+.ReactModal__Overlay{
+	z-index:10;
+	background-color:rgba(42,33,25,0.8) !important
+}
+.ReactModal__Content {
+	max-width: 900px;
+	padding:0 !importants;
+	border:0 !important;
+	overflow: visible !importants;
+}
+.ModalInner {
+	background-image: url(images/hyrule/hobgtop.png), url(images/hyrule/hobgbtm.png);
+    background-position: top,bottom;
+    background-repeat: no-repeat,no-repeat;
+    background-size: 100%,100%;
+}
+
+.inputouter{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	background-color: #24201a;
+	border-radius:12px;
+	padding:6px 16px;
+	img{height:20px;}
+	input{
+		background:transparent;
+		border:0;
+		color:#fff;
+		&:focus{
+			outline:0
+		}
+	}
+}
+
+.afterunlock{
+	.Rowmain{
+		display:flex;
+		margin:0 -20px;
+		.Rowouter{
+			width:50%;
+			
+			
+		}
+		.box{
+			width:100%;
+			margin:10px;
+			padding:30px;
+			background-color: #24201a;
+			border-radius:12px;
+			color:#fff;
+			h2{color: #ddc6ab;margin-bottom:6px;font-weight:500 !important}
+			.roulunlock{
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				margin:30px 0;
+			}
+		}
+	}
+}
+
+
 
 
 // responsive starts
