@@ -1244,9 +1244,6 @@ td {
 	}
 
 	.bgbxsm {
-		// background: url("images/hyrule/boardbgsm.png");
-		// background-size: 100% 100%;
-
 		background-image: 
 		url("images/hyrule/boardbgsmtop.png"), 
 		url("images/hyrule/boardbgsmbtm.png");
@@ -1599,8 +1596,6 @@ td {
 	}
 
 	.bgbxl {
-		// background: url(images/hyrule/hobg.png);
-		// background-size: 100% 100%;
 		padding: 40px 60px 54px;
 
 		.triangle {
@@ -1756,14 +1751,12 @@ td {
 		display:flex;
 		margin:0 -20px;
 		.Rowouter{
-			width:50%;
-			
-			
+			width:50%;			
 		}
 		.box{
-			width:100%;
+			width:-webkit-fill-available;
 			margin:10px;
-			padding:30px;
+			padding:24px;
 			background-color: #24201a;
 			border-radius:12px;
 			color:#fff;
@@ -1774,6 +1767,58 @@ td {
 				align-items:center;
 				margin:30px 0;
 			}
+		}
+		@media (max-width: 768px) {
+			flex-direction:column;
+			margin:0;
+			.Rowouter{
+				width:100%;			
+			}
+			.box{
+				margin: 0 0 10px 0;
+			}
+		}
+		
+	}
+}
+
+
+
+// unlock button
+.unlockframe{
+	background:url("images/hyrule/boardbgtop.png"), 
+	url("images/hyrule/boardbgbtm.png");
+		
+	background-position: top, bottom;
+	background-repeat: no-repeat, no-repeat;
+	background-size: 100%,100%;
+	padding: 50px;
+	position:relative;
+	&:before{
+		position:absolute;
+		content:"";
+		top:50%;
+		transform:translateY(-50%);
+		left:0;
+		width:100%;
+		height:80%;
+		background: url("images/hyrule/boardbgmid.png");
+		background-size: 100%;
+		background-repeat:repeat;
+		z-index:-1
+	}
+	@media (max-width: 550px) {
+		background-image: 
+		url("images/hyrule/boardbgmbtop.png"), 
+		url("images/hyrule/boardbgmbbtm.png");
+		background-size: 100%,100%;
+		padding:45px;
+		&:before{
+			background: url("images/hyrule/boardbgmbmid.png");
+			background-size: 100%;
+			background-repeat:repeat;
+			z-index:-1;
+			height: 60%;
 		}
 	}
 }
@@ -1965,25 +2010,17 @@ td {
 
 @media (max-width: 500px) {
 	.homecardouter .bgbxsm{
-		// background: url("images/hyrule/framesmbg.png");
-		// background-size: 100% 100%;
 		min-height: 254px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 	}
 	.homecardouter .bgbxl{
-		// background: url("images/hyrule/framebxlbg.png");
-		// background-size: 100% 100%;
 		min-height: 254px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 	}
-	// .framelgbg {
-	// 	background: url("images/hyrule/frame500.png");
-	// 	background-size: 100% 100%;
-	// }
 
 	.farmcardouter .farmcardmain {
 		width: calc(100%);

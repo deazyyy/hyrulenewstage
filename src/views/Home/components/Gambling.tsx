@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
 import KingHeader from 'components/Header/KingHeader'
+import UnlockButton from 'components/UnlockButton/UnlockButton'
 
 const Gambline: React.FC = () => {
     return (
@@ -18,7 +19,7 @@ const Gambline: React.FC = () => {
                     <div className="rowinner green">~$0.00</div>
                 </div>
             </div>
-            <button className="btn-main btngreen">Unlock Wallet</button>
+            <UnlockButton background={"green"}/>
         </div>
     )
 }

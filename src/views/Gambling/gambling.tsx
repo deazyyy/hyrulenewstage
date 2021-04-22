@@ -8,18 +8,12 @@ import Amount from './Modals/Amount'
 import AfterUnlock from './components/AfterUnlock'
 import BeforeUnlock from './components/BeforeUnlock'
 
-
-
-
-
 const Gambling: React.FC = () => {
-  
+
     return (
         <>
-         
-            
-            <Amount/>
-            <Tnc/>
+            <Amount />
+            <Tnc />
             <div className="roulettehero">
                 <div className="rouletteherow rouletteherow1">
                     <Heading heading={"ROULETTE"} brief={"Play to earn RUPEEs"} />
@@ -29,7 +23,7 @@ const Gambling: React.FC = () => {
                             <Playerrow amount={15} players={17} perc={400} bordercolor={"#cf9737"} />
                             <Playerrow amount={15} players={17} perc={400} bordercolor={"#554137"} />
                             <Playerrow amount={15} players={17} perc={400} bordercolor={"#3a3532"} />
-                            
+
                         </div>
                     </div>
                 </div>
@@ -39,12 +33,10 @@ const Gambling: React.FC = () => {
 
             </div>
 
-            <div style={{ position: "relative" }}>
-                <BeforeUnlock/>
-                    <AfterUnlock/>
-                    
+            <div style={{ position: "relative",marginTop:"10px" }}>
+                <BeforeUnlock />
+                <AfterUnlock />
                 <div className="homecardouter roulettehomeouter">
-                    
                     <Howworks />
                 </div>
             </div>

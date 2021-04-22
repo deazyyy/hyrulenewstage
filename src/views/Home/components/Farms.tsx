@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
 import KingHeader from 'components/Header/KingHeader'
+import UnlockButton from 'components/UnlockButton/UnlockButton'
 
 
 const Farmsbx: React.FC = () => {
@@ -19,7 +20,7 @@ const Farmsbx: React.FC = () => {
                     <div className="rowinner green">~$0.00</div>
                 </div>
             </div>
-            <button className="btn-main btngreen">Unlock Wallet</button>
+            <UnlockButton background={"green"}/>
         </div>
     )
 }
