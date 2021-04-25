@@ -12,13 +12,13 @@ const customStyles = {
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
         background: 'transparent',
-        maxWidth: "600px"
+        maxWidth: "900px"
     }
 };
 
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 
-const Amount: React.FC = () => {
+const KokModal: React.FC = () => {
     const [modalIsOpen, setIsOpen] = React.useState(true);
     function openModal() {
         setIsOpen(true);
@@ -33,7 +33,7 @@ const Amount: React.FC = () => {
     }
     return (
         <Modal
-            parentSelector={() => document.querySelector('.homecardouter ')}
+            parentSelector={() => document.querySelector('.kokbox ')}
             isOpen={modalIsOpen}
             onAfterOpen={afterOpenModal}
             onRequestClose={closeModal}
@@ -41,9 +41,8 @@ const Amount: React.FC = () => {
             contentLabel="Example Modal"
         >
             <div className="bgbxl homecards">
-                <img src="images/hyrule/close.png" alt="close" className="modalclose" onClick={closeModal}/>
                 <KingHeader heading={"Enter amount to bet"} />
-                <div className="infoouter" style={{ color: "#ddc6ab", textAlign: "center" }}>
+                <div className="infoouter" style={{ color: "#ddc6ab", textAlign: "center" ,flexDirection:"column"}}>
                     <div className="inputouter">
                         <input />
                         <div className="d-flex align-items-center">
@@ -66,7 +65,7 @@ const Amount: React.FC = () => {
                         Bets are final. Your RUPEE can not be returned to you if you lose.
                    </div>
                 </div>
-                <div className="d-flex mx-auto mt-2">
+                <div className="d-flex justify-content-center mt-2">
                     <a className="btn-main btnbrown mx-3" onClick={closeModal}>Confirm</a>
                     <a className="btn-main btnbrown" onClick={closeModal}>Cancel</a>
                 </div>
@@ -76,4 +75,4 @@ const Amount: React.FC = () => {
     )
 }
 
-export default Amount
+export default KokModal

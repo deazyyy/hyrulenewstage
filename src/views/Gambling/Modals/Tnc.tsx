@@ -41,6 +41,7 @@ const Tnc: React.FC = () => {
             contentLabel="Example Modal"
         >
             <div className="bgbxl homecards frameroulette">
+                <img src="images/hyrule/close.png" alt="close" className="modalclose" onClick={closeModal}/>
                 <KingHeader heading={"Warning"} />
                 <div className="infoouter">
                     Bets are final! Your RUPEE will not be returned to you if you lose. Bet are only valid for one wheel turn.

@@ -21,11 +21,13 @@ const customStyles = {
 
 interface Props {
     background?: string
+    width?: string
 }
 const ButtonGreen = styled.button`
     background: url(images/hyrule/btn_bg.png);
     background-size: 100% 100%;
     color: #fff ;
+    
 `
 const ButtonBrown = styled.button`
     background: url(images/hyrule/btnnavbg.png) !important;
@@ -35,7 +37,7 @@ const ButtonBrown = styled.button`
 
 
 
-const UnlockButton: React.FC<Props> = ({ background }) => {
+const UnlockButton: React.FC<Props> = ({ background ,width}) => {
     const [modalIsOpen, setIsOpen] = React.useState(false);
     function openModal() {
         setIsOpen(true);
@@ -52,8 +54,8 @@ const UnlockButton: React.FC<Props> = ({ background }) => {
         <>
             {
                 background == "brown" ?
-                    <ButtonBrown className="btn-main" onClick={openModal}>Unlock Wallet</ButtonBrown> :
-                    <ButtonGreen className="btn-main" onClick={openModal}>Unlock Wallet</ButtonGreen>
+                    <ButtonBrown className="btn-main" onClick={openModal} style={{width:width}}>Unlock Wallet</ButtonBrown> :
+                    <ButtonGreen className="btn-main" onClick={openModal} style={{width:width}}>Unlock Wallet</ButtonGreen>
             }
             <Modal
                 parentSelector={() => document.querySelector('body ')}

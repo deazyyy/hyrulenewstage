@@ -96,6 +96,7 @@ $white:#FFFFFF;
 	background-color: transparent !important;
 	border-color: transparent !important;
 	color: #9a9388 !important;
+	cursor:not-allowed;
 }
 
 .homemainheading {
@@ -328,7 +329,7 @@ $white:#FFFFFF;
 		background: url("images/hyrule/frame.png");
 		background-size: 100% 100%;
 		width: 30%;
-		padding: 6px 60px 80px;
+		padding: 6px 45px 80px;
 		color: #000;
 		margin: 10px;
 
@@ -1159,7 +1160,6 @@ td {
 	.homecards {
 		width: 50%;
 		position: relative;
-		padding: 8px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -1172,139 +1172,97 @@ td {
 	.headingouter {
 		color: #fff
 	}
+	@media (max-width: 768px) {
+		flex-direction: column;
+	
+		.homecards {
+			width: 100% !important;
+			margin-bottom: 10px !important;
+		}
+		.rowouter{text-align:left}
+	}
+	
+	
+}
 
-	.bgbxl {
+
+
+
+.bgbxl {
+	background-image: 
+	url("images/hyrule/boardbgtop.png"), 
+	url("images/hyrule/boardbgbtm.png");
+	  
+	background-position: top, bottom;
+	background-repeat: no-repeat, no-repeat;
+	background-size: 100%,100%;
+	padding: 50px;
+	position:relative;
+	&:before{
+		position:absolute;
+		content:"";
+		top:50%;
+		transform:translateY(-50%);
+		left:0;
+		width:100%;
+		height:80%;
+		background: url("images/hyrule/boardbgmid.png");
+		background-size: 100%;
+		background-repeat:repeat;
+		z-index:-1
+	}
+	@media (max-width: 550px) {
 		background-image: 
-		url("images/hyrule/boardbgtop.png"), 
-		url("images/hyrule/boardbgbtm.png");
-		  
-		background-position: top, bottom;
-		background-repeat: no-repeat, no-repeat;
+		url("images/hyrule/boardbgmbtop.png"), 
+		url("images/hyrule/boardbgmbbtm.png");
 		background-size: 100%,100%;
-		padding: 50px;
-		position:relative;
+		padding:45px;
 		&:before{
-			position:absolute;
-			content:"";
-			top:50%;
-			transform:translateY(-50%);
-			left:0;
-			width:100%;
-			height:80%;
-			background: url("images/hyrule/boardbgmid.png");
+			background: url("images/hyrule/boardbgmbmid.png");
 			background-size: 100%;
 			background-repeat:repeat;
-			z-index:-1
-		}
-		@media (max-width: 550px) {
-			background-image: 
-			url("images/hyrule/boardbgmbtop.png"), 
-			url("images/hyrule/boardbgmbbtm.png");
-			background-size: 100%,100%;
-			padding:45px;
-			&:before{
-				background: url("images/hyrule/boardbgmbmid.png");
-				background-size: 100%;
-				background-repeat:repeat;
-				z-index:-1;
-				height: 60%;
-			}
-		}
-
-		.headingouterot {
-			position: absolute;
-			top: 0;
-			left: 50%;
-			height: 80px;
-			width: 90%;
-			transform: translate(-50%, -30px);
-
-			.headingouter {
-				background: url("images/hyrule/bxheadbg.png");
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: contain;
-				height: 100%;
-				position: relative;
-
-				h4 {
-					position: absolute;
-					top: 0%;
-					left: 50%;
-					transform: translate(-50%, 35px);
-				}
-			}
-		}
-
-		.infoouter {
-			margin-top: 30px;
-			display:flex;
-			.rowouter{width:50%}
+			z-index:-1;
+			height: 60%;
 		}
 	}
-
-	.bgbxsm {
-		background-image: 
-		url("images/hyrule/boardbgsmtop.png"), 
-		url("images/hyrule/boardbgsmbtm.png");
-		  
-		background-position: top, bottom;
-		background-repeat: no-repeat, no-repeat;
-		background-size: 100%,100%;
-		position:relative;
-
-		&:before{
-			position:absolute;
-			content:"";
-			top:50%;
-			transform:translateY(-50%);
-			left:0;
-			width:100%;
-			height:80%;
-			background: url("images/hyrule/boardbgsmmid.png");
-			background-size: 100%;
-			background-repeat:repeat;
-			z-index:-1
+	@media (max-width: 768px) {
+		&:first-child {
+			margin-bottom: 40px !important;
 		}
-		@media (max-width: 550px) {
-			background-image: 
-			url("images/hyrule/boardbgmbtop.png"), 
-			url("images/hyrule/boardbgmbbtm.png");
-			background-size: 100%,100%;
-			&:before{
-				background: url("images/hyrule/boardbgmbmid.png");
-				background-size: 100%;
-				background-repeat:repeat;
-				z-index:-1;
-				height: 60%;
-			}
-		}
+	}
+	
 
-		h2 {
-			font-size: 30px;
-			margin-bottom: 14px
-		}
+	.headingouterot {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		height: 80px;
+		width: 90%;
+		transform: translate(-50%, -30px);
 
-		.infoouter {
-			margin-top: 0px;
-			flex-direction:column;
-			
-		}
+		.headingouter {
+			background: url("images/hyrule/bxheadbg.png");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			height: 100%;
+			position: relative;
 
-		.rowouter {
-			display: flex;
-			margin: 8px 0;
-			justify-content: space-between;
-			flex-direction:row;
-			align-items: flex-start;
-			width:100% !important;
-
-			.rowinner {
-				width: auto
+			h4 {
+				position: absolute;
+				top: 0%;
+				left: 50%;
+				transform: translate(-50%, 35px);
+				color: #ddc6ab;
 			}
 		}
 	}
 
+	.infoouter {
+		margin-top: 30px;
+		display:flex;
+		.rowouter{width:50%}
+	}
 	.rowouter {
 		display: flex;
 		align-items: center;
@@ -1312,32 +1270,86 @@ td {
 		justify-content:center;
 		margin: 8px 0;
 		text-align:center;
-
+	
 		.rowinner {
 			// width: 50%
 			margin:6px 0
 		}
 	}
-
+	
 	button {
 		width: 100%;
 		margin-top: 14px
 	}
+}
 
-	@media (max-width: 768px) {
-		flex-direction: column;
+.bgbxsm {
+	background-image: 
+	url("images/hyrule/boardbgsmtop.png"), 
+	url("images/hyrule/boardbgsmbtm.png");
+	  
+	background-position: top, bottom;
+	background-repeat: no-repeat, no-repeat;
+	background-size: 100%,100%;
+	position:relative;
 
-		.homecards {
-			width: 100% !important;
-			margin-bottom: 10px !important;
+	&:before{
+		position:absolute;
+		content:"";
+		top:50%;
+		transform:translateY(-50%);
+		left:0;
+		width:100%;
+		height:80%;
+		background: url("images/hyrule/boardbgsmmid.png");
+		background-size: 100%;
+		background-repeat:repeat;
+		z-index:-1
+	}
+	@media (max-width: 550px) {
+		background-image: 
+		url("images/hyrule/boardbgmbtop.png"), 
+		url("images/hyrule/boardbgmbbtm.png");
+		background-size: 100%,100%;
+		&:before{
+			background: url("images/hyrule/boardbgmbmid.png");
+			background-size: 100%;
+			background-repeat:repeat;
+			z-index:-1;
+			height: 60%;
 		}
+	}
 
-		.bgbxl:first-child {
-			margin-bottom: 40px !important;
+	h2 {
+		font-size: 30px;
+		margin-bottom: 14px
+	}
+
+	.infoouter {
+		margin-top: 0px;
+		flex-direction:column;
+		
+	}
+
+	.rowouter {
+		display: flex;
+		margin: 8px 0;
+		justify-content: space-between;
+		flex-direction:row;
+		align-items: flex-start;
+		width:100% !important;
+
+		.rowinner {
+			width: auto
 		}
-		.rowouter{text-align:left}
 	}
 }
+
+
+
+
+
+
 
 .harvestactionheading {
 	font-size: 14px;
@@ -1710,16 +1722,55 @@ td {
 }
 
 
+
+
+
 // modal
-.ReactModal__Overlay{
-	z-index:10;
-	background-color:rgba(42,33,25,0.8) !important
+.modalclose{
+	width:56px;
+	height:auto;
+	position:absolute;
+	right:0;
+	top:0;
+	transform:translate(10px,-10px);
+	cursor:pointer;
 }
 .ReactModal__Content {
 	max-width: 900px;
-	padding:0 !importants;
+	padding:0 !important;
 	border:0 !important;
-	overflow: visible !importants;
+	overflow: visible !important;
+	.framelgbg {
+		@media (max-width: 992px) {
+			background-image: 
+			url("images/hyrule/frame768topmodal.png"), 
+			url("images/hyrule/frame768btmmodal.png");
+			background-size: 100%,100%;
+			&:before{
+				background: url("images/hyrule/frame768midmodal.png");
+				background-size: 100%;
+				background-repeat:repeat;
+				z-index:-1
+			}
+		}
+		@media (max-width: 550px) {
+			background-image: 
+			url("images/hyrule/frame402top.png"), 
+			url("images/hyrule/frame402btm.png");
+			background-size: 100%,100%;
+			&:before{
+				background: url("images/hyrule/frame402mid.png");
+				background-size: 100%;
+				background-repeat:repeat;
+				z-index:-1;
+			}
+		}
+	}
+}
+
+.ReactModal__Overlay{
+	z-index:10;
+	background-color:rgba(42,33,25,0.8) !important;
 }
 .ModalInner {
 	background-image: url(images/hyrule/hobgtop.png), url(images/hyrule/hobgbtm.png);
@@ -1825,6 +1876,61 @@ td {
 
 
 
+.kokboxmodal{
+	.bottom{
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		button{
+			max-width: 130px !important;
+			justify-content:center !important
+		}
+	}
+	
+	@media (max-width: 800px) {
+		.bottom{
+			flex-direction:column
+		}
+		
+	}
+}
+
+.kokmodalouter{
+	div{text-align:left !important}
+	.icon{
+		width:100%;
+		max-width:200px;
+		margin-right:20px;
+	}
+	h3{font-size:26px;}
+	h3{font-size:24px;margin-top:5px}
+	.kokinfouter{
+		display:flex;
+		flex-flow:wrap;
+		.kokinfo{
+			display:flex;
+			align-items:center;
+			margin:6px 0;
+			padding: 0 14px;
+			min-width:33%;
+			.kokvalue{
+				margin-right:10px;
+				border-radius: 12px;
+				background-color: #6f553b;
+				border: 3px solid #a27e4f;
+				padding:8px;	
+			}
+		}
+	}
+
+	@media (max-width: 800px) {
+		flex-direction:column;
+		align-items: center;
+		
+	}
+}
+
+
 
 // responsive starts
 
@@ -1847,7 +1953,7 @@ td {
 	.farmcardouter .farmcardmain {
 		width: calc(50% - 30px);
 		margin: 10px auto;
-		padding: 6px 65px 80px;
+		padding: 6px 45px 80px;
 	}
 
 	.btn-main {
