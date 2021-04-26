@@ -12,7 +12,8 @@ const customStyles = {
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
         background: 'transparent',
-        maxWidth: "600px"
+        maxWidth: "600px",
+        width:"100%",
     }
 };
 

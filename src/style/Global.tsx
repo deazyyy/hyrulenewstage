@@ -1736,8 +1736,9 @@ td {
 	cursor:pointer;
 }
 .ReactModal__Content {
+	width:100% !important;
 	max-width: 900px;
-	padding:0 !important;
+	padding:0 10px !important;
 	border:0 !important;
 	overflow: visible !important;
 	.framelgbg {
@@ -1791,8 +1792,10 @@ td {
 		background:transparent;
 		border:0;
 		color:#fff;
+		width:calc(100% - 60px);
 		&:focus{
-			outline:0
+			outline:0;
+			border:0
 		}
 	}
 }
