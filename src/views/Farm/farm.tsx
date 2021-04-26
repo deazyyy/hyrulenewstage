@@ -2,7 +2,7 @@ import React, { Component, useState, useRef } from "react";
 import Switch from "react-switch";
 import RowFarm from './components/RowFarm'
 import RowCardFarm from './components/RowCardFarm'
-
+import WithdrawModal from './components/Modals/WithdrawModal'
 import Heading from 'components/Header/Header'
 // import {Toggle ,ButtonMenu, ButtonMenuItem} from '../components'
 
@@ -62,7 +62,7 @@ const Farm: React.FC = () => {
       </div>
 
 
-      <div style={{ position: "relative" }}>
+      <div style={{ position: "relative" }} className="farmcardblockouter">
         <div className="farmrowblockouter framelgbg" style={{ display: grid == true ? "none" : "block" }}>
           <div className="farmrowblockinner">
             {RowFarmarr}

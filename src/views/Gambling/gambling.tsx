@@ -4,7 +4,6 @@ import Playerrow from './components/Playerrow'
 import Wheelroll from './components/Wheelroll'
 import Howworks from './components/Howworks'
 import Tnc from './Modals/Tnc'
-import Amount from './Modals/Amount'
 import AfterUnlock from './components/AfterUnlock'
 import BeforeUnlock from './components/BeforeUnlock'
 
@@ -12,7 +11,7 @@ const Gambling: React.FC = () => {
 
     return (
         <>
-            <Amount />
+            
             <Tnc />
             <div className="roulettehero">
                 <div className="rouletteherow rouletteherow1">

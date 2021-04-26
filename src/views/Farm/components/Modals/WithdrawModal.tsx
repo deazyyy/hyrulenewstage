@@ -18,20 +18,16 @@ const customStyles = {
 };
 const { forwardRef, useRef, useImperativeHandle } = React;
 
-// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+// Make sure to bind modal to your appElement ()
 
 const WithdrawModal = forwardRef((props, ref) => {
     const [modalIsOpen, setIsOpen] = React.useState(false);
     useImperativeHandle(ref, () => ({
-
-        someExposedProperty: () => {
-            openModal()
-          }
+        openModal: () => {
+            setIsOpen(true)
+        }
     }));
-    function openModal() {
-        console.log("dfgf")
-        setIsOpen(true);
-    }
+
 
     function afterOpenModal() {
         // references are now sync'd and can be accessed.
@@ -42,7 +38,7 @@ const WithdrawModal = forwardRef((props, ref) => {
     }
     return (
         <Modal
-            parentSelector={() => document.querySelector('.farmrowblockouter')}
+            parentSelector={() => document.querySelector('.farmcardblockouter')}
             isOpen={modalIsOpen}
             onAfterOpen={afterOpenModal}
             onRequestClose={closeModal}

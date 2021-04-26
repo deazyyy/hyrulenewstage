@@ -23,15 +23,12 @@ const { forwardRef, useRef, useImperativeHandle } = React;
 const DepositModal = forwardRef((props, ref) => {
     const [modalIsOpen, setIsOpen] = React.useState(false);
     useImperativeHandle(ref, () => ({
-        
-        someExposedProperty: () => {
-            console.log(`we're inside the exposed property function!`);
-          }
-
+        openModal: () => {
+            setIsOpen(true);
+            console.log("DFg")
+        }
     }));
-    function openModal() {
-        setIsOpen(true);
-    }
+
 
     function afterOpenModal() {
         // references are now sync'd and can be accessed.
@@ -42,7 +39,7 @@ const DepositModal = forwardRef((props, ref) => {
     }
     return (
         <Modal
-            parentSelector={() => document.querySelector('.farmrowblockouter')}
+            parentSelector={() => document.querySelector('.farmcardblockouter')}
             isOpen={modalIsOpen}
             onAfterOpen={afterOpenModal}
             onRequestClose={closeModal}

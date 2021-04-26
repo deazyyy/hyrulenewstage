@@ -20,7 +20,7 @@ const Farmsbx: React.FC = () => {
                     <div className="rowinner green">~$0.00</div>
                 </div>
             </div>
-            <UnlockButton background={"green"}/>
+            <UnlockButton background={"green"} />
         </div>
     )
 }

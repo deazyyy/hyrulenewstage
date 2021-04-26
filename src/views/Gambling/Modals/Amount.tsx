@@ -16,13 +16,15 @@ const customStyles = {
     }
 };
 
-// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+const { forwardRef, useRef, useImperativeHandle } = React;
 
-const Amount: React.FC = () => {
-    const [modalIsOpen, setIsOpen] = React.useState(true);
-    function openModal() {
-        setIsOpen(true);
-    }
+const Amount = forwardRef((props, ref) => {
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+    useImperativeHandle(ref, () => ({
+        openModal: () => {
+            setIsOpen(true)
+        }
+    }));
 
     function afterOpenModal() {
         // references are now sync'd and can be accessed.
@@ -38,7 +40,6 @@ const Amount: React.FC = () => {
             onAfterOpen={afterOpenModal}
             onRequestClose={closeModal}
             style={customStyles}
-            contentLabel="Example Modal"
         >
             <div className="bgbxl homecards">
                 <img src="images/hyrule/close.png" alt="close" className="modalclose" onClick={closeModal}/>
@@ -74,6 +75,6 @@ const Amount: React.FC = () => {
             </div>
         </Modal>
     )
-}
+})
 
 export default Amount

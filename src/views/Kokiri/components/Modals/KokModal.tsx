@@ -1,6 +1,7 @@
 import React from 'react'
 import Modal from 'react-modal';
 import KingHeader from 'components/Header/KingHeader'
+import Kokinfobox from './Kokinfobox'
 
 
 const customStyles = {
@@ -16,13 +17,15 @@ const customStyles = {
     }
 };
 
-// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+const { forwardRef, useRef, useImperativeHandle } = React;
 
-const KokModal: React.FC = () => {
-    const [modalIsOpen, setIsOpen] = React.useState(true);
-    function openModal() {
-        setIsOpen(true);
-    }
+const KokModal = forwardRef((props, ref) => {
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+    useImperativeHandle(ref, () => ({
+        openModal: () => {
+            setIsOpen(true)
+        }
+    }));
 
     function afterOpenModal() {
         // references are now sync'd and can be accessed.
@@ -33,46 +36,46 @@ const KokModal: React.FC = () => {
     }
     return (
         <Modal
-            parentSelector={() => document.querySelector('.kokbox ')}
+            parentSelector={() => document.querySelector('.kokirinner ')}
             isOpen={modalIsOpen}
             onAfterOpen={afterOpenModal}
             onRequestClose={closeModal}
             style={customStyles}
             contentLabel="Example Modal"
         >
-            <div className="bgbxl homecards">
-                <KingHeader heading={"Enter amount to bet"} />
-                <div className="infoouter" style={{ color: "#ddc6ab", textAlign: "center" ,flexDirection:"column"}}>
-                    <div className="inputouter">
-                        <input />
-                        <div className="d-flex align-items-center">
-                            <div className="d-flex align-items-center mx-3">
-                                <img src="images/hyrule/gem.png" alt="tri" className="gem" />
-                                RUPEE
-                            </div>
-                            <div style={{ color: "#cf9837" }}>
-                                Max
-                            </div>
+            <div className="bgbxl homecards kokboxmodal framelgbg">
+                <img src="images/hyrule/close.png" alt="close" className="modalclose" onClick={closeModal} />
+                <KingHeader heading={"Buy NFT"} />
+                <div className="infoouter kokmodalouter" style={{ color: "#ddc6ab", textAlign: "center" }}>
+                    <img src="images/hyrule/gamblemodal.png" alt="kokmodal" className="icon"></img>
+                    <div>
+                        <h3>
+                            Hylian Shield
+                        </h3>
+                        <h4>Classic</h4>
+                        <p style={{ color: "#8d7e67", marginTop: "6px" }}>Item - Shield  - Core Set - 15010003</p>
+                        <div className="my-4">
+                            A shield passed down throught the Hyrulean royal family, along withthe legend of the hero who wielded it.
+                        </div>
+                        <div className="kokinfouter">
+                            <Kokinfobox valuebx={56} namebx={"Vitality"} />
+                            <Kokinfobox valuebx={40} namebx={"Wisdom"} />
+                            <Kokinfobox valuebx={56} namebx={"Strength"} />
+                            <Kokinfobox valuebx={56} namebx={"Intelligence"} />
+                            <Kokinfobox valuebx={56} namebx={"Chance"} />
+                            <Kokinfobox valuebx={56} namebx={"Agility"} />
+
                         </div>
                     </div>
-                    <div className="mt-2 mb-3">1827.35 RUPEE Available</div>
-                    <div className="mb-2">
-                        Your bet must be rounded <br />
-                        Minimum bet = 1 RUPEE  <br />
-                        Maximum bet = 50 RUPEE
-                   </div>
-                    <div style={{ color: "#f15451" }}>
-                        Bets are final. Your RUPEE can not be returned to you if you lose.
-                   </div>
                 </div>
-                <div className="d-flex justify-content-center mt-2">
-                    <a className="btn-main btnbrown mx-3" onClick={closeModal}>Confirm</a>
-                    <a className="btn-main btnbrown" onClick={closeModal}>Cancel</a>
+                <div className="bottom">
+                    <button className="btn-main btnbrown mx-3"><img src="images/hyrule/gem.png" alt="kokiri gem" />250</button>
+                    <div style={{ color: "#f15451" }}>Purchases are final. Your RUPEE cannot be returned to you.</div>
                 </div>
 
             </div>
         </Modal>
     )
-}
+})
 
 export default KokModal
