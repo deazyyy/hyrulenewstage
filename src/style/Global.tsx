@@ -1635,7 +1635,10 @@ td {
 
 .wheelouterpouter {
 	overflow: hidden;
-	pointer-events:none
+	pointer-events:none;
+}
+.wheelouterpouter img{
+	pointer-events:none;
 }
 
 .wheelouter {
