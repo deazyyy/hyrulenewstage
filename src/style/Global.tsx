@@ -1635,6 +1635,7 @@ td {
 
 .wheelouterpouter {
 	overflow: hidden;
+	pointer-events:none
 }
 
 .wheelouter {
