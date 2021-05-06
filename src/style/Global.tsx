@@ -326,12 +326,32 @@ $white:#FFFFFF;
 	margin-top: 50px;
 
 	.farmcardmain {
-		background: url("images/hyrule/frame.png");
-		background-size: 100% 100%;
 		width: 30%;
 		padding: 6px 45px 80px;
 		color: #000;
 		margin: 10px;
+		background-image: 
+	url("images/hyrule/frametop.png"), 
+	url("images/hyrule/framebtm.png");
+	  
+	background-position: top, bottom;
+	background-repeat: no-repeat, no-repeat;
+	background-size: 100%,100%;
+	position:relative;
+
+	&:before{
+		position:absolute;
+		content:"";
+		top:50%;
+		transform:translateY(-50%);
+		left:0;
+		width:100%;
+		height:80%;
+		background: url("images/hyrule/framemid.png");
+		background-size: 100%;
+		background-repeat:repeat;
+		z-index:-1
+	}
 
 		.farmrowcolicon {
 			display: flex;

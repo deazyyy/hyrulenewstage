@@ -20,9 +20,15 @@ const Button = styled.button`
     color:#fff;
     font-weight:400 !important;
     margin-bottom:10px;
+    margin-left:auto;
+    margin-right:auto;
     img{
         width:20px;
         border-radius:50%;
+    }
+    &:focus{
+        border:none;
+        outline:none;
     }
 `
 
