@@ -69,8 +69,17 @@ $white:#FFFFFF;
 		}
 	}
 }
-
-\
+.bg-fade{
+	position:fixed;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.6);
+	top:0;
+	right:0;
+	left:0;
+	bottom:0;
+	z-index: 5;
+}
 
 .input-main {
 	background-color: rgb(43, 33, 23);
@@ -245,6 +254,7 @@ $white:#FFFFFF;
 	margin: 16px 0px;
 	padding: 46px 0;
 	padding-bottom:80px;
+	position:relative;
 
 	.farmrowblockinner {
 		max-height: 668px;
@@ -252,11 +262,36 @@ $white:#FFFFFF;
 		-ms-overflow-style: none;
 		/* IE and Edge */
 		scrollbar-width: none;
+		position:relative;
 
 		/* Firefox */
 		&::-webkit-scrollbar {
 			display: none;
 		}
+		
+	}
+	.blur1, .blur2{
+		content:'';
+		position:absolute;
+		top:0;
+		height: 50px;
+   		width: calc(100% - 40px);
+		margin:24px auto 0;
+		filter:blur(5px);
+		background:linear-gradient(to bottom, rgba(62,56,43,1) 70%, rgba(62,56,43,0.5));
+		z-index:1;
+		left: 50%;
+		transform: translateX(-50%);
+		border-top-right-radius: 40px;
+		border-top-left-radius: 40px;
+	}
+	.blur2{
+		top:unset;
+		bottom:0;
+		margin:0 auto 50px;
+		border-bottom-right-radius: 40px;
+		border-bottom-left-radius: 40px;
+		background:linear-gradient(to top, rgba(62,56,43,1) 70%, rgba(62,56,43,0.5));
 	}
 
 	.farmrowmain {
@@ -1758,6 +1793,10 @@ td {
 	top:0;
 	transform:translate(10px,-10px);
 	cursor:pointer;
+	z-index:10;
+	@media (max-width: 800px) {
+		width:48px;
+	}
 }
 .ReactModal__Content {
 	width:100% !important;
@@ -1950,6 +1989,38 @@ td {
 		}
 	}
 
+	@media (max-width: 800px) {
+		flex-direction:column;
+		align-items: center;
+		.icon{
+			max-width:130px;
+		}
+		.kokinfouter{
+			flex-flow: nowrap;
+    		overflow: scroll;
+			-ms-overflow-style: none;
+			/* IE and Edge */
+			scrollbar-width: none;
+
+			/* Firefox */
+			&::-webkit-scrollbar {
+				display: none;
+			}
+			.kokinfo{
+				min-width:unset;
+				padding:0;
+				padding-right:20px;
+			}
+			padding-left:100px;
+			animation: slidetoleft 1.2s ease;
+			animation-fill-mode: forwards;
+			@keyframes slidetoleft {
+				0%   { padding-left:100px; }
+				100% { padding-left:0px; }
+			  }
+		}
+		
+	}
 	@media (max-width: 800px) {
 		flex-direction:column;
 		align-items: center;

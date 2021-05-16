@@ -20,7 +20,7 @@ const Panel: React.FC<Props> = ({setShowMenu}) => {
             <img src={'./images/hyrule/logo.png'} className="navlogo" />
             {menuitems.map(items => (
                 items.accordion ?
-                    <div className="menulinkouter">
+                    <div className="menulinkouter accordionmenu">
                         <Link to="/" data-toggle="collapse" data-target={"#menuacc" + items.id}><img src={"images/icons/ic" + items.id + ".png"} />{items.name} <i className="fas fa-angle-down"></i></Link>
                         <div className="menulinkinner collapse" id={"menuacc" + items.id}>
                             {items.accordions.map(item => (

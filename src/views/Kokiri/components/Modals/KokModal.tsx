@@ -48,7 +48,7 @@ const KokModal = forwardRef((props, ref) => {
                 <KingHeader heading={"Buy NFT"} />
                 <div className="infoouter kokmodalouter" style={{ color: "#ddc6ab", textAlign: "center" }}>
                     <img src="images/hyrule/gamblemodal.png" alt="kokmodal" className="icon"></img>
-                    <div>
+                    <div style={{width:"100%"}}>
                         <h3>
                             Hylian Shield
                         </h3>

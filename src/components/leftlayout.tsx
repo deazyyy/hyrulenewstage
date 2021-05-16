@@ -13,20 +13,11 @@ const Leftlayout: React.FC = () => {
         }
         window.addEventListener('resize', handleResize)
     })
-    useEffect(() => {
-        document.querySelector(".body_main").addEventListener("click", handleClickOutside, false);
-        return () => {
-            document.querySelector(".body_main").removeEventListener("click", handleClickOutside, false);
-        };
-      }, []);
-      
-  const handleClickOutside = event => {
-    if (!(wrapperRef.current && !wrapperRef.current.contains(event.target)) )   {
-        setShowMenu(true);
-    }
-  };
+
+
     return (
         <div>
+            <div className="bg-fade" style={{ display: (showMenu == true) ?"none" : "block" }} onClick={() => setShowMenu(true)}></div>
             <div className="mobilenav">
                 <i className={(showMenu == true) ? "fas fa-bars" : "fas fa-times"} onClick={() => setShowMenu(!showMenu)} ></i>
                 <img src={'./images/hyrule/logo.png'} className="navlogo" />

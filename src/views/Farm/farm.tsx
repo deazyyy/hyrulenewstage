@@ -64,9 +64,11 @@ const Farm: React.FC = () => {
 
       <div style={{ position: "relative" }} className="farmcardblockouter">
         <div className="farmrowblockouter framelgbg" style={{ display: grid == true ? "none" : "block" }}>
+          <div className="blur1"></div>
           <div className="farmrowblockinner">
             {RowFarmarr}
           </div>
+          <div className="blur2"></div>
         </div>
         <div className="farmcardouter" style={{ display: grid == false ? "none" : "flex" }}>
           {RowCardFarmarr}
