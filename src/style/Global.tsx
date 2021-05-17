@@ -462,78 +462,7 @@ $white:#FFFFFF;
 
 /* prettier-ignore */
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, article, aside, canvas, details, embed, figure, figcaption, footer,header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio,
 video {
 	margin: 0;
 	padding: 0;
@@ -557,45 +486,36 @@ h2 {
 
 /* prettier-ignore */
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
 section {
 	display: block;
 }
 
 
-	.btn-main {
-		background: url("images/hyrule/btn_bg.png");
-		background-size: 100% 100%;
-		background-color: transparent;
-		text-align: center;
-		cursor: pointer;
-		transition: all 0.2s linear;
-		min-height:60px;
-		display:flex;
-		align-items:center;
-		justify-content:center;
-		padding: 14px 30px;
-		border-radius: 16px;
-		width: max-content;
-		color: #000;
-		font-weight: 500;
-		border:none;
-		&:hover {
-			transform: scale(1.1);
-		}
-		&:focus{
-			outline:none;
-		}
+.btn-main {
+	background: url("images/hyrule/btn_bg.png");
+	background-size: 100% 100%;
+	background-color: transparent;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.2s linear;
+	min-height:60px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	padding: 14px 30px;
+	border-radius: 16px;
+	width: max-content;
+	color: #000;
+	font-weight: 500;
+	border:none;
+	&:hover {
+		transform: scale(1.1);
 	}
+	&:focus{
+		outline:none;
+	}
+}
 
 .btnbrown {
 	background: url("images/hyrule/btnnavbg.png");
@@ -1016,6 +936,7 @@ td {
 		margin: 0px;
 		height: calc(100% - 0px);
 		padding-top: 90px;
+		min-height: unset;
 	}
 }
 
