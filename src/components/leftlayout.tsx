@@ -12,8 +12,15 @@ const Leftlayout: React.FC = () => {
             setWidth(window.innerWidth)
         }
         window.addEventListener('resize', handleResize)
+        if(!showMenu){
+            document.getElementById("root").style.height = "100vh";
+            document.getElementById("root").style.overflow = 'hidden';
+        }else if(showMenu){
+            document.getElementById("root").style.height = "100%";
+            document.getElementById("root").style.overflow = 'auto';
+        }
     })
-
+    
 
     return (
         <div>

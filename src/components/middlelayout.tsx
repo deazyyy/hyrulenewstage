@@ -26,7 +26,6 @@ class Middlelayout extends React.Component {
                   <Route path="/kokiri">
                     <Kokiri />
                   </Route>
-
                   <Route path="/">
                     <Landing />
                   </Route>
